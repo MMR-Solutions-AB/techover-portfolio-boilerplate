@@ -169,3 +169,34 @@ body {
 }
 
 /** START WRITING YOUR CODE BELOW  **/
+
+.full-section {
+  min-height: 100vh;
+}
+
+
+.canvas {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url('../img/filler.png');
+}
+
+#foreground {
+  z-index: 1;
+}
+
+.primary-text-color {
+  color: var(--primary)
+}
+
+.big-button {
+  font-size: 13pt;
+  border: 2px solid var(--white);
+  padding: 20px 40px;
+  background: none;
+  color: var(--white);
+}
