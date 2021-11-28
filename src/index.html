@@ -39,20 +39,307 @@
   <body>
 
     <!-- Start writing your HTML code here -->
+
+    <!-- HOME -->
     <section class="full-section">
-      <div id="pt" class="canvas">  </div>
+      <div id="pt" class="canvas ">  </div>
 
       <!--Innehåll nedan:-->
       <div id="foreground" class="row col s12">
 
-      <h1>Hello I'm <span class="primary-text-color">Adam</span>
+      <h1>Hello, I'm <span class="primary-text-color bold">Adam</span>
       </br>
       I'm a full-stack web developer.
       </h1>
-      <button class="big-button">View my work</button>
-
+      <a class="view-my-work" href="#about"> <!-- SETUP SMOOTH SCROLLING -->
+      <button class="big-button"> 
+        View my work
+        <i class="mdi mdi-arrow-right"></i>
+      </button>
+    </a>
       </div>
     </section>
+
+
+
+
+
+
+    <!-- ABOUT  -->
+   
+  
+
+    <nav class="navbar">
+      <div class="navbar__container">
+          <div class="navbar_toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <div class="link-wrap">
+        <div class="nav-item" id="home-link"><a class="home-anc" href="#pt">Home</a></div>
+        <div class="nav-item" id="about-link"><a class="about-anc" href="#about">About</a></div>
+        <div class="nav-item" id="projects-link"><a class="projects-anc" href="#projects">Portfolio</a></div>
+        <div class="nav-item" id="footer-link"><a class="footer-anc" href="#footer">Contact</a></div>
+      </div> 
+      </div>
+  </nav>
+    <section id="about" >
+
+      <div class="row col s12 pt80">
+        <h2>
+          About
+          <br/>
+          <hr>
+        </h2>
+      </div>
+
+
+      <!--Hexagons-->
+        <div class="row col s12">
+          <div class="hexagon-container col s6 m3">
+
+            <div class="hexagon">
+              <i class="mdi mdi-speedometer"></i>
+            </div>
+  
+            <h5>On-Time</h5>
+            <p>Making sure the set deadlines are reached intime.</p>
+  
+          </div>
+  
+          <div class="hexagon-container col s6 m3">
+          
+            <div class="hexagon">
+              <i class="mdi mdi-cellphone-link"></i>
+            </div>
+          
+            <h5>Responsive</h5>
+            <p>Making sure my layouts will work on any device, big or small.</p>
+          
+          </div>
+  
+          <div class="hexagon-container col s6 m3">
+          
+            <div class="hexagon">
+              <i class="mdi mdi-lightbulb-outline"></i>
+            </div>
+          
+            <h5>Innovative</h5>
+            <p>Bringing modern ideas & perspecives to the table.</p>
+          
+          </div>
+  
+          <div class="hexagon-container col s6 m3">
+          
+            <div class="hexagon">
+              <i class="mdi mdi-rocket"></i>
+            </div>
+          
+            <h5>Results</h5>
+            <p>Making sure the results are as good as asked for.</p>
+          
+          </div>
+      </div>
+
+      <!-- Profilepic & text -->
+      <div class="pr40 pl40 pb100 row p-pic">
+
+        <div id="about-me" class="col m6 12">
+          <img src="./img/me.png"/>
+          <h4>Who am I?</h4>
+          <p>
+            I'm a Full-Stack Developer who has attended <a href="https://www.academy.techover.nu/home49768186" target="_blank" class="primary-text-color">Techover Academy </a> in Stockholm, Sweden
+          </p>
+          <p>
+            I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+            Let's make something special.
+          </p>
+        </div>
+
+       <!-- Bars -->
+
+      <div id="bars-container" class="row col m6 s12 waypoint" data-animation="slide-in-right">
+        <div class="bar">
+          <div id="css" class="fill">
+            <div class="tag">CSS</div>
+          </div>
+          <span> 
+            90%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="html" class="fill">
+            <div class="tag">HTML</div>
+          </div>
+          <span> 
+            90%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="javascript" class="fill">
+            <div class="tag">JavaScript</div>
+          </div>
+          <span> 
+            90%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="react" class="fill">
+            <div class="tag">React</div>
+          </div>
+          <span> 
+            75%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="redux" class="fill">
+            <div class="tag">Redux</div>
+          </div>
+          <span> 
+            75%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="node-js" class="fill">
+            <div class="tag">Node.js</div>
+          </div>
+          <span> 
+            75%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="express" class="fill">
+            <div class="tag">Express</div>
+          </div>
+          <span> 
+            70%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="mongodb" class="fill">
+            <div class="tag">MongoDB</div>
+          </div>
+          <span> 
+            70%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="rest-api" class="fill">
+            <div class="tag">REST API</div>
+          </div>
+          <span> 
+            70%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="npm" class="fill">
+            <div class="tag">NPM</div>
+          </div>
+          <span> 
+            60%
+          </span>
+        </div>
+
+        <div class="bar">
+          <div id="git" class="fill">
+            <div class="tag">Git</div>
+          </div>
+          <span> 
+            60%
+          </span>
+        </div>
+      </div>
+
+      </div>
+
+     
+   
+
+    </section>
+  
+ <!-- PROJECTS  -->
+    <section id="projects" >
+      <div class="row col s12 pt80">
+        <h2>
+          Projects
+          <br/>
+          <hr>
+        </h2>
+      </div>
+
+      <div class="projects-selector" >
+        <a class="selector" id="btn-all" >All</a>
+        <a class="selector" id="btn-react">React-js(mern)</a>
+        <a class="selector" id="btn-node">Node-JS</a>
+        <a class="selector" id="btn-other">Other</a>
+      </div>
+
+      <div class="gallery">
+        <div id="spotify-img">
+          <img class="project-image"  src="./img/thumb-1.png" alt="img">
+        </div>
+        <div id="webshop-img">
+          <img class="project-image"  src="./img/thumb-2.png" alt="img">
+        </div>
+        <div id="dashboard-img">
+          <img class="project-image"  src="./img/thumb-3.png" alt="img">
+        </div>
+        <div id="klarna-img">
+          <img class="project-image"  src="./img/thumb-4.png" alt="img">
+        </div>
+        <div id="countdown-img">
+          <img class="project-image"  src="./img/thumb-5.png" alt="img">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER  -->
+    <section id="footer">
+      <div class="row col s12 pt80">
+        <h2>
+          Contact
+          <br/>
+          <hr>
+        </h2>
+      </div>
+
+
+      <p class="blue-text">Have a question or want to get together?</p>
+      <p><span class="blue-text">Email me at: </span>adamtaghy@gmail.com</p>
+      
+      <div id="links" class="col m12 s12">
+        <a href="mailto:adamtaghy@gmail.com" class="primary-text-color">Email Me</a>
+        <a href="./cv/YOUR_NAME.pdf" target="_blank" class="primary-text-color">Download CV</a>
+      </div>
+
+      <div class="bottom-footer">
+        <div class="arrows">
+          <a class=arrow-to-top href="#pt"><i class="mdi mdi-arrow-up"></i></a>
+        </div>
+        <div class="link-container">
+          <a class="link-box" href="https://google.com" target="_blank" ><i class="mdi mdi-linkedin"></i></a>
+          <a class="link-box" href="https://google.com" target="_blank" ><i class="mdi mdi-github-circle"></i></a>
+        </div>
+        <p class="footer-name">Adam Nyholm Taghy <span class="primary-text-color">©2021</span></p>
+      </div>
+
+
+
+
+    </section>
+
+
     
     <!-- Preloads images so that there is no lag when browsing the site: -->
     <div id="preload">
@@ -79,8 +366,10 @@
       <img src="img/slides/webshop-0.png" />
       <img src="img/slides/webshop-0.png" />
     </div>
-  </body>
-</html>
 
-<!-- SCRIPT THAT WE HAVE PROVIDED FOR YOU -->
-<script src="scripts/canvas.js"></script>
+    <script src="index.js"></script>
+  </body>
+  </html>
+  
+  <!-- SCRIPT THAT WE HAVE PROVIDED FOR YOU -->
+  <script src="scripts/canvas.js"></script>
