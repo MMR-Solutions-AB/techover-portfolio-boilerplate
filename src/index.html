@@ -41,15 +41,15 @@
     <!-- Start writing your HTML code here -->
 
     <!-- HOME -->
-    <section class="full-section">
-      <div id="pt" class="canvas ">  </div>
-
+    <section class="full-section testingcolor">
+      <div id="pt"> </div>
+<!-- " class="canvas" ^ -->
       <!--Innehåll nedan:-->
       <div id="foreground" class="row col s12">
 
-      <h1>Hello, I'm <span class="primary-text-color bold">Adam</span>
+      <h1 class="home-text" >Hello, <span class="home-text-slowly" > I'm </span><span class="primary-text-color bold home-text-slowly">Adam</span>
       </br>
-      I'm a full-stack web developer.
+      <div class="home-text-slow" >a full-stack web developer.</div>
       </h1>
       <a class="view-my-work" href="#about"> <!-- SETUP SMOOTH SCROLLING -->
       <button class="big-button"> 
@@ -72,9 +72,9 @@
     <nav class="navbar">
       <div class="navbar__container">
           <div class="navbar_toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+              <div class="bar-toggle btoggleone"></div>
+              <div class="bar-toggle btoggletwo"></div>
+              <div class="bar-toggle btogglethree"></div>
           </div>
           <div class="link-wrap">
         <div class="nav-item" id="home-link"><a class="home-anc" href="#pt">Home</a></div>
@@ -87,78 +87,57 @@
     <section id="about" >
 
       <div class="row col s12 pt80">
-        <h2>
+        <h2 class="about-title">
           About
           <br/>
-          <hr>
-        </h2>
+          
       </div>
 
-
+      
       <!--Hexagons-->
         <div class="row col s12">
-          <div class="hexagon-container col s6 m3">
+          <div class="globecn-container col s6 m3">
 
-            <div class="hexagon">
-              <i class="mdi mdi-speedometer"></i>
-            </div>
-  
-            <h5>On-Time</h5>
-            <p>Making sure the set deadlines are reached intime.</p>
-  
+            <div class="globebox motivation">Staying motivated ?</br>Tap me.</div>
           </div>
+      
+         
   
-          <div class="hexagon-container col s6 m3">
-          
-            <div class="hexagon">
-              <i class="mdi mdi-cellphone-link"></i>
-            </div>
-          
-            <h5>Responsive</h5>
-            <p>Making sure my layouts will work on any device, big or small.</p>
-          
+          <div class="globecn-container col s6 m3">
+
+            <div class="globebox worketh">My work ethic ?</br>Tap me.</div>
           </div>
+      
+          <div class="globecn-container col s6 m3">
+
+            <div class="globebox innovation">Staying innovative ?</br>Tap me.</div>
+          </div>
+      
   
-          <div class="hexagon-container col s6 m3">
-          
-            <div class="hexagon">
-              <i class="mdi mdi-lightbulb-outline"></i>
-            </div>
-          
-            <h5>Innovative</h5>
-            <p>Bringing modern ideas & perspecives to the table.</p>
-          
+          <div class="globecn-container col s6 m3">
+
+            <div class="globebox interests">My interests ?</br>Tap me.</div>
           </div>
-  
-          <div class="hexagon-container col s6 m3">
-          
-            <div class="hexagon">
-              <i class="mdi mdi-rocket"></i>
-            </div>
-          
-            <h5>Results</h5>
-            <p>Making sure the results are as good as asked for.</p>
-          
-          </div>
+      
       </div>
 
       <!-- Profilepic & text -->
       <div class="pr40 pl40 pb100 row p-pic">
 
-        <div id="about-me" class="col m6 12">
-          <img src="./img/me.png"/>
+        <div id="about-me" class="col m6 s12">
+          <img class="profile-pic" src="./img/me.png"/>
           <h4>Who am I?</h4>
           <p>
-            I'm a Full-Stack Developer who has attended <a href="https://www.academy.techover.nu/home49768186" target="_blank" class="primary-text-color">Techover Academy </a> in Stockholm, Sweden
+            somewhere in my mid twenties I realized that it was time to broaden my spectrum from just sales, customer service and key account management over to software development.
+            hence why I in late 2021 attended a coding bootcamp hosted by <a class="tech-link" href="https://www.mmrsolutions.se/" target="_blank" class="primary-text-color">MMR Solutions</a>.
           </p>
           <p>
-            I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
-            Let's make something special.
+          I'm based in Stockholm, Sweden with personal interests towards finance and data analytics and interactive things on the web. </br> <span class="hoveremoji">😃</span>
           </p>
         </div>
 
        <!-- Bars -->
-
+       <div class="bars-wrapper">
       <div id="bars-container" class="row col m6 s12 waypoint" data-animation="slide-in-right">
         <div class="bar">
           <div id="css" class="fill">
@@ -262,7 +241,7 @@
 
       </div>
 
-     
+     </div>
    
 
     </section>
@@ -270,11 +249,10 @@
  <!-- PROJECTS  -->
     <section id="projects" >
       <div class="row col s12 pt80">
-        <h2>
+        <h2 class="projects-title">
           Projects
           <br/>
-          <hr>
-        </h2>
+          
       </div>
 
       <div class="projects-selector" >
@@ -307,16 +285,16 @@
     <!-- FOOTER  -->
     <section id="footer">
       <div class="row col s12 pt80">
-        <h2>
+        <h2 class="footer-title">
           Contact
           <br/>
-          <hr>
+         
         </h2>
       </div>
 
 
-      <p class="blue-text">Have a question or want to get together?</p>
-      <p><span class="blue-text">Email me at: </span>adamtaghy@gmail.com</p>
+      <p class="footer-text">Have a question or want to get together?</p>
+      <p><span class="footer-text">Email me at: </span>adamtaghy@gmail.com</p>
       
       <div id="links" class="col m12 s12">
         <a href="mailto:adamtaghy@gmail.com" class="primary-text-color">Email Me</a>
@@ -328,8 +306,8 @@
           <a class=arrow-to-top href="#pt"><i class="mdi mdi-arrow-up"></i></a>
         </div>
         <div class="link-container">
-          <a class="link-box" href="https://google.com" target="_blank" ><i class="mdi mdi-linkedin"></i></a>
-          <a class="link-box" href="https://google.com" target="_blank" ><i class="mdi mdi-github-circle"></i></a>
+          <a class="link-box-in" href="https://google.com" target="_blank" ><i class="mdi mdi-linkedin"></i></a>
+          <a class="link-box-git" href="https://google.com" target="_blank" ><i class="mdi mdi-github-circle"></i></a>
         </div>
         <p class="footer-name">Adam Nyholm Taghy <span class="primary-text-color">©2021</span></p>
       </div>
@@ -338,10 +316,10 @@
 
 
     </section>
-
+    <script src="index.js"></script>
 
     
-    <!-- Preloads images so that there is no lag when browsing the site: -->
+    
     <div id="preload">
       <img src="img/me.png" />
       <img src="img/filler.jpg" />
@@ -371,5 +349,5 @@
   </body>
   </html>
   
-  <!-- SCRIPT THAT WE HAVE PROVIDED FOR YOU -->
+ 
   <script src="scripts/canvas.js"></script>

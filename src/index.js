@@ -1,12 +1,18 @@
 /* Mobile Menu */
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.link-wrap');
+const hambgOne = document.querySelector('.btoggleone');
+const hambgTwo = document.querySelector('.btoggletwo');
+const hambgThree = document.querySelector('.btogglethree');
 
 //Mobile menu
 
 const mobileMenu = () => {
   menu.classList.toggle('is.active');
   menuLinks.classList.toggle('active');
+  hambgOne.classList.toggle('onetoggled');
+  hambgTwo.classList.toggle('twotoggled');
+  hambgThree.classList.toggle('threetoggled');
 };
 
 menu.addEventListener('click', mobileMenu);
@@ -21,6 +27,9 @@ const highlightMenu = () => {
   const about = document.querySelector('#about-link');
   const projects = document.querySelector('#projects-link');
   const footer = document.querySelector('#footer-link');
+  const aboutTitle = document.querySelector('.about-title');
+  const projectsTitle = document.querySelector('.projects-title');
+  const footerTitle = document.querySelector('.footer-title');
   let scrollPos = window.scrollY;
   //console.log(scrollPos)
 
@@ -34,17 +43,20 @@ const highlightMenu = () => {
     about.classList.add('highlight');
     home.classList.remove('highlight');
     projects.classList.remove('highlight');
+    aboutTitle.classList.add('slide-about');
     return;
   } else if (window.innerWidth > 960 && scrollPos < 2345) {
     projects.classList.add('highlight');
     about.classList.remove('highlight');
     footer.classList.remove('highlight');
+    projectsTitle.classList.add('slide-projects');
 
     return;
   } else if (window.innerWidth > 960 && scrollPos < 3000) {
     projects.classList.remove('highlight');
     about.classList.remove('highlight');
     footer.classList.add('highlight');
+    footerTitle.classList.add('slide-footer');
     return;
   }
   if ((elem && window.innerWidth < 1200) || elem) {
@@ -136,6 +148,50 @@ btnOther.addEventListener('click', () => {
   btnReact.classList.remove('highlighted-btn');
   btnNode.classList.remove('highlighted-btn');
   btnOther.classList.add('highlighted-btn');
+});
+
+/* The four buttons */
+
+const motivation = document.querySelector('.motivation');
+const worketh = document.querySelector('.worketh');
+const innovation = document.querySelector('.innovation');
+const interests = document.querySelector('.interests');
+
+motivation.addEventListener('click', () => {
+  motivation.classList.toggle('hey');
+  if (motivation.classList.contains('hey')) {
+    motivation.innerHTML = '"Just work like hell" - Elon Musk';
+  } else if (!motivation.classList.contains('hey')) {
+    motivation.innerHTML = 'Staying motivated ? Tap me.';
+  }
+});
+
+worketh.addEventListener('click', () => {
+  worketh.classList.toggle('hey');
+  if (worketh.classList.contains('hey')) {
+    worketh.innerHTML = 'Respect, productivty & discipline';
+  } else if (!worketh.classList.contains('hey')) {
+    worketh.innerHTML = 'My work ethic ? Tap me.';
+  }
+});
+
+innovation.addEventListener('click', () => {
+  innovation.classList.toggle('hey');
+  if (innovation.classList.contains('hey')) {
+    innovation.innerHTML =
+      'Following trends, staying creative, thinking scalable';
+  } else if (!innovation.classList.contains('hey')) {
+    innovation.innerHTML = ' Staying innovative ? Tap me.';
+  }
+});
+
+interests.addEventListener('click', () => {
+  interests.classList.toggle('hey');
+  if (interests.classList.contains('hey')) {
+    interests.innerHTML = 'Finance, data analytics & video games. ';
+  } else if (!interests.classList.contains('hey')) {
+    interests.innerHTML = 'My interests ?  Tap me.';
+  }
 });
 
 // const express = require('express');
