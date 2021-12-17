@@ -11,6 +11,8 @@ Icon
 ._*
 .env
 .package-lock.json
+/img
+
 
 ############################
 # Linux
