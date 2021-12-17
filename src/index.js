@@ -5,6 +5,11 @@ const hambgOne = document.querySelector('.btoggleone');
 const hambgTwo = document.querySelector('.btoggletwo');
 const hambgThree = document.querySelector('.btogglethree');
 
+const homeAnc = document.querySelector('.home-anc');
+const aboutAnc = document.querySelector('.about-anc');
+const projectsAnc = document.querySelector('.projects-anc');
+const foooterAnc = document.querySelector('.footer-anc');
+
 //Mobile menu
 
 const mobileMenu = () => {
@@ -15,7 +20,21 @@ const mobileMenu = () => {
   hambgThree.classList.toggle('threetoggled');
 };
 
+const ancRemover = () => {
+  hambgOne.classList.toggle('onetoggled');
+  hambgTwo.classList.toggle('twotoggled');
+  hambgThree.classList.toggle('threetoggled');
+};
+
 menu.addEventListener('click', mobileMenu);
+
+homeAnc.addEventListener('click', ancRemover);
+
+aboutAnc.addEventListener('click', ancRemover);
+
+projectsAnc.addEventListener('click', ancRemover);
+
+foooterAnc.addEventListener('click', ancRemover);
 
 /* Mobile Menu */
 
@@ -27,36 +46,31 @@ const highlightMenu = () => {
   const about = document.querySelector('#about-link');
   const projects = document.querySelector('#projects-link');
   const footer = document.querySelector('#footer-link');
+
   const aboutTitle = document.querySelector('.about-title');
   const projectsTitle = document.querySelector('.projects-title');
   const footerTitle = document.querySelector('.footer-title');
   let scrollPos = window.scrollY;
   //console.log(scrollPos)
 
-  //adds 'highlight' class to my menu items
-
-  if (window.innerWidth > 960 && scrollPos < 660) {
+  if (window.innerWidth > 960 && scrollPos < 560) {
     home.classList.add('highlight');
     about.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+  } else if (window.innerWidth > 960 && scrollPos < 1900) {
     about.classList.add('highlight');
     home.classList.remove('highlight');
     projects.classList.remove('highlight');
-    aboutTitle.classList.add('slide-about');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+  } else if (window.innerWidth > 960 && scrollPos < 2750) {
     projects.classList.add('highlight');
     about.classList.remove('highlight');
     footer.classList.remove('highlight');
-    projectsTitle.classList.add('slide-projects');
-
     return;
   } else if (window.innerWidth > 960 && scrollPos < 3000) {
     projects.classList.remove('highlight');
     about.classList.remove('highlight');
     footer.classList.add('highlight');
-    footerTitle.classList.add('slide-footer');
     return;
   }
   if ((elem && window.innerWidth < 1200) || elem) {
@@ -96,18 +110,23 @@ const btnReact = document.getElementById('btn-react');
 const btnNode = document.getElementById('btn-node');
 const btnOther = document.getElementById('btn-other');
 
-const spotifyImage = document.getElementById('spotify-img');
-const webshopImage = document.getElementById('webshop-img');
-const dashboardImage = document.getElementById('dashboard-img');
-const klarnaImage = document.getElementById('klarna-img');
-const countdownImage = document.getElementById('countdown-img');
+const slider = document.getElementById('gallery-slider-id');
+
+const slideAll = document.getElementById('gallery-slide-all');
+const slideReact = document.getElementById('gallery-slide-react');
+const slideNode = document.getElementById('gallery-slide-node');
+const slideOther = document.getElementById('gallery-slide-other');
+
+// const spotifyImage = document.getElementById('spotify-img');
+// const webshopImage = document.getElementById('webshop-img');
+// const dashboardImage = document.getElementById('dashboard-img');
+// const klarnaImage = document.getElementById('klarna-img');
+// const countdownImage = document.getElementById('countdown-img');
 
 btnAll.addEventListener('click', () => {
-  spotifyImage.classList.remove('remove');
-  webshopImage.classList.remove('remove');
-  dashboardImage.classList.remove('remove');
-  klarnaImage.classList.remove('remove');
-  countdownImage.classList.remove('remove');
+  slider.style.transform = 'translateX(0%)';
+  slider.style.height = slideAll.clientHeight + 'px';
+
   btnAll.classList.add('highlighted-btn');
   btnReact.classList.remove('highlighted-btn');
   btnNode.classList.remove('highlighted-btn');
@@ -115,11 +134,9 @@ btnAll.addEventListener('click', () => {
 });
 
 btnReact.addEventListener('click', () => {
-  spotifyImage.classList.remove('remove');
-  webshopImage.classList.remove('remove');
-  dashboardImage.classList.add('remove');
-  klarnaImage.classList.add('remove');
-  countdownImage.classList.add('remove');
+  slider.style.transform = 'translateX(-25%)';
+  slider.style.height = slideReact.clientHeight + 'px';
+
   btnAll.classList.remove('highlighted-btn');
   btnReact.classList.add('highlighted-btn');
   btnNode.classList.remove('highlighted-btn');
@@ -127,11 +144,9 @@ btnReact.addEventListener('click', () => {
 });
 
 btnNode.addEventListener('click', () => {
-  spotifyImage.classList.add('remove');
-  webshopImage.classList.add('remove');
-  dashboardImage.classList.add('remove');
-  klarnaImage.classList.remove('remove');
-  countdownImage.classList.add('remove');
+  slider.style.transform = 'translateX(-50%)';
+  slider.style.height = slideNode.clientHeight + 'px';
+
   btnAll.classList.remove('highlighted-btn');
   btnReact.classList.remove('highlighted-btn');
   btnNode.classList.add('highlighted-btn');
@@ -139,11 +154,9 @@ btnNode.addEventListener('click', () => {
 });
 
 btnOther.addEventListener('click', () => {
-  spotifyImage.classList.add('remove');
-  webshopImage.classList.add('remove');
-  dashboardImage.classList.remove('remove');
-  klarnaImage.classList.add('remove');
-  countdownImage.classList.remove('remove');
+  slider.style.transform = 'translateX(-75%)';
+  slider.style.height = slideOther.clientHeight + 'px';
+
   btnAll.classList.remove('highlighted-btn');
   btnReact.classList.remove('highlighted-btn');
   btnNode.classList.remove('highlighted-btn');
