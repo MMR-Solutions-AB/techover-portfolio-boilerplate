@@ -19,9 +19,8 @@
   },
   "scripts": {
     "dev": "nodemon src/index.js -e ejs,js,css,html,jpg,png",
-    "dev-scss": "concurrently \"nodemon src/index.js -e ejs,js,css,html,jpg,png,scss\" \"npm run scss\"",
     "deploy": "git add . && git commit -m \"deploying...\" && heroku login && heroku create && git push heroku main",
-    "start": "node ./src/index.js",
+    "start": "node ./src/start.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch src/style -o src/style"
   },

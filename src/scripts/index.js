@@ -2,7 +2,7 @@
  *  This file is part of the boilerplate. You do NOT need to understand this. In time, you will.
  */
 
-$(function() {
+$(function () {
   var isMobile;
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -12,12 +12,12 @@ $(function() {
     isMobile = true;
 
     // Mobile height fix
-    $('.height-fix').each(function() {
+    $('.height-fix').each(function () {
       var h = $(this).height();
       $(this).height(h);
     });
   }
-
+  /* COMMENT OUT FOR NOW
   // RESIZE RESETS
   $(window).resize(function() {
     posFilterBar($('.filter').first());
@@ -124,12 +124,12 @@ $(function() {
     });
     $('.float-bar .row').css('left', (pos - origin) * -1);
   }
-
+  COMMENT OUT FOR NOW */
   // GALLERY
   $('#gallery').mixItUp({});
 
   function mixClear() {
-    setTimeout(function() {
+    setTimeout(function () {
       $('#gallery').removeClass('waypoint');
     }, 2000);
   }
@@ -137,7 +137,7 @@ $(function() {
   // SCROLL ANIMATIONS
   function onScrollInit(items, elemTrigger) {
     var offset = $(window).height() / 1.6;
-    items.each(function() {
+    items.each(function () {
       var elem = $(this),
         animationClass = elem.attr('data-animation'),
         animationDelay = elem.attr('data-delay');
@@ -145,29 +145,29 @@ $(function() {
       elem.css({
         '-webkit-animation-delay': animationDelay,
         '-moz-animation-delay': animationDelay,
-        'animation-delay': animationDelay
+        'animation-delay': animationDelay,
       });
 
       var trigger = elemTrigger ? trigger : elem;
 
       trigger.waypoint(
-        function() {
+        function () {
           elem.addClass('animated').addClass(animationClass);
           if (elem.get(0).id === 'gallery') mixClear(); //OPTIONAL
         },
         {
           triggerOnce: true,
-          offset: offset
+          offset: offset,
         }
       );
     });
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     onScrollInit($('.waypoint'));
   }, 10);
 
-  $('#close').click(function() {
+  $('#close').click(function () {
     $('#success').removeClass('expand');
   });
 });
